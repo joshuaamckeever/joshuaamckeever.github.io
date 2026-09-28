@@ -1,27 +1,42 @@
-
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Joshua McKeever</title>
+
   <style>
+
+    /* =========================
+       GENERAL
+    ========================= */
+
     body {
       margin: 0;
-  background-image: url("0F795EB0-BA98-4198-B328-3F540F7ACA3C.JPG");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
+      background-image: url("0F795EB0-BA98-4198-B328-3F540F7ACA3C.JPG");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+
       color: #f7f6f2;
       font-family: Arial, sans-serif;
     }
 
+
+    /* =========================
+       NAVIGATION
+    ========================= */
+
     nav {
       display: flex;
       justify-content: space-between;
+      align-items: center;
+
       padding: 25px 8%;
-      border-bottom: 1px solid #ddd;
+
+      border-bottom: 1px solid rgba(255, 255, 255, 0.4);
     }
 
     nav a {
@@ -29,6 +44,15 @@
       text-decoration: none;
       margin-left: 20px;
     }
+
+    nav a:hover {
+      opacity: 0.6;
+    }
+
+
+    /* =========================
+       HEADER
+    ========================= */
 
     header {
       padding: 100px 12%;
@@ -38,82 +62,325 @@
     h1 {
       font-size: clamp(50px, 9vw, 100px);
       margin: 20px 0;
+      line-height: 0.95;
     }
 
     header p {
       font-size: 18px;
-      color: #666;
       max-width: 500px;
       line-height: 1.7;
     }
 
+
+    /* =========================
+       SECTIONS
+    ========================= */
+
     section {
       padding: 60px 12%;
-      border-top: 1px solid #ddd;
+      border-top: 1px solid rgba(255, 255, 255, 0.4);
     }
+
+    section h2 {
+      font-size: 36px;
+      margin-bottom: 25px;
+    }
+
+    section p {
+      max-width: 650px;
+      line-height: 1.7;
+    }
+
+
+    /* =========================
+       WORKS GALLERY
+    ========================= */
+
+    .works-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 40px;
+
+      margin-top: 40px;
+    }
+
+    .works-grid figure {
+      margin: 0;
+    }
+
+    .works-grid img {
+      width: 100%;
+      height: 400px;
+
+      object-fit: cover;
+      display: block;
+    }
+
+    .works-grid figcaption {
+      margin-top: 12px;
+
+      font-size: 14px;
+      line-height: 1.5;
+    }
+
+
+    /* =========================
+       CONTACT
+    ========================= */
+
+    #contact a {
+      color: inherit;
+    }
+
+
+    /* =========================
+       FOOTER
+    ========================= */
 
     footer {
       padding: 30px 12%;
-      color: #777;
+      color: rgba(255, 255, 255, 0.7);
     }
+
+
+    /* =========================
+       MOBILE
+    ========================= */
+
+    @media (max-width: 700px) {
+
+      nav {
+        padding: 20px 6%;
+      }
+
+      nav a {
+        margin-left: 10px;
+        font-size: 14px;
+      }
+
+      header {
+        padding: 80px 8%;
+      }
+
+      section {
+        padding: 50px 8%;
+      }
+
+      .works-grid {
+        grid-template-columns: 1fr;
+        gap: 35px;
+      }
+
+      .works-grid img {
+        height: 300px;
+      }
+
+    }
+
   </style>
 </head>
+
+
 <body>
+
+
+  <!-- =========================
+       NAVIGATION
+  ========================= -->
+
   <nav>
+
     <strong>JM.</strong>
+
     <div>
       <a href="#about">About</a>
       <a href="#research">Research</a>
-      <a href="#teaching">Teaching</a>
+      <a href="#works">Works</a>
       <a href="#contact">Contact</a>
     </div>
+
   </nav>
 
+
+
+  <!-- =========================
+       HERO / INTRO
+  ========================= -->
+
   <header>
+
     <p>Biology & Design</p>
-    <h1>Joshua<br>McKeever</h1>
+
+    <h1>
+      Joshua<br>
+      McKeever
+    </h1>
+
     <p>
       Exploring biology, scientific discovery,
       and the ways we teach and learn.
     </p>
+
   </header>
 
+
+
+  <!-- =========================
+       ABOUT
+  ========================= -->
+
   <section id="about">
+
     <h2>About Me</h2>
+
     <p>
       I'm a molecular biology researcher and
       educator interested in immune system
       development and gene regulation.
     </p>
+
   </section>
 
+
+
+  <!-- =========================
+       RESEARCH
+  ========================= -->
+
   <section id="research">
+
     <h2>Research</h2>
+
     <p>
       My research explores how gene regulation
       shapes cellular identity and immune tolerance.
     </p>
+
   </section>
 
-  <section id="teaching">
+
+
+  <!-- =========================
+       WORKS
+  ========================= -->
+
+  <section id="works">
+
     <h2>Works</h2>
+
     <p>
-      I enjoy teaching biology, mentoring students,
-      and making scientific ideas accessible.
+      A collection of research, teaching,
+      design, and other projects.
     </p>
+
+
+    <div class="works-grid">
+
+
+      <!-- WORK 1 -->
+
+      <figure>
+
+        <img
+          src="images/work1.jpg"
+          alt="Description of work 1"
+        >
+
+        <figcaption>
+          Caption for the first work.
+        </figcaption>
+
+      </figure>
+
+
+
+      <!-- WORK 2 -->
+
+      <figure>
+
+        <img
+          src="images/work2.jpg"
+          alt="Description of work 2"
+        >
+
+        <figcaption>
+          Caption for the second work.
+        </figcaption>
+
+      </figure>
+
+
+
+      <!-- WORK 3 -->
+
+      <figure>
+
+        <img
+          src="images/work3.jpg"
+          alt="Description of work 3"
+        >
+
+        <figcaption>
+          Caption for the third work.
+        </figcaption>
+
+      </figure>
+
+
+
+      <!-- WORK 4 -->
+
+      <figure>
+
+        <img
+          src="images/work4.jpg"
+          alt="Description of work 4"
+        >
+
+        <figcaption>
+          Caption for the fourth work.
+        </figcaption>
+
+      </figure>
+
+
+    </div>
+
   </section>
+
+
+
+  <!-- =========================
+       CONTACT
+  ========================= -->
 
   <section id="contact">
+
     <h2>Contact</h2>
+
     <p>
+
       <a href="mailto:mckeever.joshua@gmail.com">
         Email me
       </a>
+
     </p>
+
   </section>
 
+
+
+  <!-- =========================
+       FOOTER
+  ========================= -->
+
   <footer>
+
     © 2026 Joshua McKeever
+
   </footer>
+
+
 </body>
+
 </html>
