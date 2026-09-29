@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Works | Joshua McKeever</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <header class="site-header">
+    <div class="page nav">
+      <a class="logo" href="index.html" aria-label="Home">JM.</a>
+
+      <nav class="nav-links" aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="research.html">Research</a>
+        <a href="works.html" aria-current="page">Works</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="page">
+    <section class="content-section">
+      <h1>Works</h1>
+      <p>
+        A collection of research, teaching, design, and other projects.
+        Select a photo to view it at full size.
+      </p>
+
+      <div class="works-grid">
+        <figure class="work-card">
+          <button
+            class="photo-button"
+            type="button"
+            aria-label="Expand photo: Exploring immune cell development in the lab"
+          >
+            <img
+              src="images/work1.jpg"
+              alt="Microscope in a laboratory"
+              loading="lazy"
+            >
+          </button>
+          <figcaption>
+            Exploring immune cell development in the lab.
+          </figcaption>
+        </figure>
+
+        <figure class="work-card">
+          <button
+            class="photo-button"
+            type="button"
+            aria-label="Expand photo: Field research in the mountains"
+          >
+            <img
+              src="images/work2.jpg"
+              alt="Mountain landscape reflected in a lake"
+              loading="lazy"
+            >
+          </button>
+          <figcaption>
+            Field research in the mountains.
+          </figcaption>
+        </figure>
+
+        <figure class="work-card">
+          <button
+            class="photo-button"
+            type="button"
+            aria-label="Expand photo: Teaching and mentoring"
+          >
+            <img
+              src="images/work3.jpg"
+              alt="Instructor teaching a classroom"
+              loading="lazy"
+            >
+          </button>
+          <figcaption>
+            Teaching and mentoring the next generation of scientists.
+          </figcaption>
+        </figure>
+
+        <figure class="work-card">
+          <button
+            class="photo-button"
+            type="button"
+            aria-label="Expand photo: The beauty and detail of the natural world"
+          >
+            <img
+              src="images/work4.jpg"
+              alt="Bee resting on a white flower"
+              loading="lazy"
+            >
+          </button>
+          <figcaption>
+            The beauty and detail of the natural world.
+          </figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <footer>
+      <p>© 2026 Joshua McKeever</p>
+    </footer>
+  </main>
+
+  <!-- Full-screen photo viewer -->
+  <div
+    id="lightbox"
+    class="lightbox"
+    role="dialog"
+    aria-modal="true"
+    aria-label="Expanded Works photo"
+    aria-hidden="true"
+  >
+    <button
+      id="lightbox-close"
+      class="lightbox-close"
+      type="button"
+      aria-label="Close photo viewer"
+    >&times;</button>
+
+    <button
+      id="lightbox-prev"
+      class="lightbox-arrow lightbox-prev"
+      type="button"
+      aria-label="Previous photo"
+    >&#8249;</button>
+
+    <div class="lightbox-content">
+      <img id="lightbox-image" class="lightbox-image" src="" alt="">
+      <p id="lightbox-caption" class="lightbox-caption"></p>
+      <div id="lightbox-counter" class="lightbox-counter" aria-live="polite"></div>
+    </div>
+
+    <button
+      id="lightbox-next"
+      class="lightbox-arrow lightbox-next"
+      type="button"
+      aria-label="Next photo"
+    >&#8250;</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
